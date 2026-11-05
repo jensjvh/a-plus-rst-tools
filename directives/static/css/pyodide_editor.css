@@ -1,0 +1,68 @@
+/* Styles for the python-editor (Pyodide) directive */
+.pyodide-editor {
+    border: 1px solid var(--bs-border-color);
+    border-radius: 4px;
+    margin: 1em 0;
+    background: var(--bs-tertiary-bg);
+}
+.pyodide-editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 10px;
+    background: var(--bs-secondary-bg);
+    border-bottom: 1px solid var(--bs-border-color);
+    font-weight: bold;
+}
+.pyodide-editor-status {
+    font-weight: normal;
+    font-size: 0.85em;
+    color: var(--bs-secondary-color);
+}
+.pyodide-editor-status.pyodide-status-error { color: #b00020; }
+.pyodide-editor-status.pyodide-status-ready { color: #2e7d32; }
+.pyodide-editor-body { padding: 8px; }
+.pyodide-editor .CodeMirror {
+    border: 1px solid var(--bs-border-color);
+    height: auto;
+    font-size: 0.95em;
+}
+.pyodide-editor textarea.pyodide-editor-input {
+	width: 100%;
+    min-height: 12em;
+    font-family: monospace;
+    font-size: 0.95em;
+    border: 1px solid var(--bs-border-color);
+    box-sizing: border-box;
+}
+.pyodide-editor-controls { margin-top: 6px; }
+.pyodide-editor-controls button {
+    margin-right: 6px;
+    padding: 4px 14px;
+    cursor: pointer;
+}
+.pyodide-editor-controls button:disabled { cursor: default; opacity: 0.6; }
+.pyodide-editor-output {
+    margin: 8px 0 0 0;
+    padding: 8px;
+    background: var(--bs-tertiary-bg);
+    color: var(--bs-body-color);
+    min-height: 2em;
+    max-height: 24em;
+    overflow: auto;
+    white-space: pre-wrap;
+    font-family: monospace;
+    font-size: 0.95em;
+}
+.pyodide-editor-output canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 4px 0;
+    background: #fff;
+}
+.pyodide-editor-output:empty::before {
+    content: "Output appears here...";
+    color: var(--bs-secondary-color);
+    font-style: italic;
+}

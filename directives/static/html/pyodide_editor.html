@@ -1,0 +1,14 @@
+<div class="pyodide-editor" id="{uid}">
+  <div class="pyodide-editor-header">
+    <span class="pyodide-editor-title">{title}</span>
+    <span class="pyodide-editor-status"></span>
+  </div>
+  <div class="pyodide-editor-body">
+    <textarea class="pyodide-editor-input" data-initial-code="{initial}" spellcheck="false"{height}>{code}</textarea>
+    <div class="pyodide-editor-controls">
+      <button type="button" class="btn btn-primary pyodide-editor-run"  onclick="pyodideEditor.run(this)">Run</button>
+      <button type="button" class="btn btn-primary pyodide-editor-reset" onclick="pyodideEditor.reset(this)">Reset</button>
+    </div>
+    <pre class="pyodide-editor-output"></pre>
+  </div>
+</div>
